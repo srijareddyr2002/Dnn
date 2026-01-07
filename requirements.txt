@@ -1,0 +1,39 @@
+# Core Numerical & Data Utilities
+numpy
+pandas
+scipy
+
+# Deep Learning Frameworks (CUDA installed separately)
+torch
+torchvision
+torchaudio
+pytorch-lightning
+torchmetrics
+
+# Machine Learning
+scikit-learn
+
+# NLP & Language Models
+transformers
+tokenizers
+nltk
+spacy
+rouge-score
+
+# Image Processing & Computer Vision
+Pillow
+opencv-python
+imageio
+scikit-image
+lpips
+
+# Visualization & Experiment Tracking
+matplotlib
+seaborn
+tensorboard
+wandb
+tqdm
+
+# Configuration & Utilities
+pyyaml
+colorama

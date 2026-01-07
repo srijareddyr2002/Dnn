@@ -1,0 +1,140 @@
+data:
+  num_frames: 5
+  image_size: 224
+  max_text_length: 30
+  vocab_size: 10000
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+model:
+  visual_encoder: resnet50
+  visual_feature_dim: 2048
+  freeze_visual_encoder: false
+  text_embedding_dim: 300
+  text_hidden_dim: 512
+  text_num_layers: 2
+  text_bidirectional: true
+  text_encoder_output_dim: 1024
+  fusion_dim: 1024
+  fusion_dropout: 0.3
+  tag_vocab_size: 51
+  tag_embedding_dim: 128
+  tag_hidden_dim: 512
+  tag_dropout: 0.4
+  sequence_hidden_dim: 1024
+  sequence_num_layers: 2
+  sequence_dropout: 0.3
+  attention_dim: 1024
+  attention_heads: 8
+  image_decoder_hidden_dims:
+  - 1024
+  - 2048
+  - 2048
+  image_decoder_dropout: 0.3
+  text_decoder_hidden_dim: 1024
+  text_decoder_num_layers: 2
+  text_decoder_dropout: 0.3
+training:
+  batch_size: 16
+  num_epochs: 10
+  learning_rate: 0.0001
+  weight_decay: 1.0e-05
+  grad_clip_norm: 1.0
+  lambda_image: 1.0
+  lambda_text: 1.0
+  lambda_tag: 0.3
+  optimizer: adam
+  betas: !!python/tuple
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  scheduler: reduce_on_plateau
+  scheduler_patience: 5
+  scheduler_factor: 0.5
+  scheduler_min_lr: 1.0e-07
+  early_stopping: true
+  early_stopping_patience: 10
+  save_every_n_epochs: 5
+  save_best_only: true
+augmentation:
+  horizontal_flip: true
+  random_crop: true
+  color_jitter: true
+  rotation: 5
+evaluation:
+  use_ssim: true
+  use_lpips: true
+  use_psnr: true
+  use_bleu: true
+  use_rouge: true
+  use_perplexity: true
+  tag_threshold: 0.5
+logging:
+  log_every_n_steps: 50
+  visualize_every_n_epochs: 5
+  num_samples_to_visualize: 4
+  use_tensorboard: true
+  use_wandb: true
+  wandb_project: srija-visual-storytelling
+  wandb_entity: null
+tags:
+  objects:
+  - person
+  - dog
+  - cat
+  - car
+  - table
+  - chair
+  - cup
+  - bottle
+  - tree
+  - building
+  - phone
+  - laptop
+  - book
+  - bed
+  - window
+  - door
+  - plant
+  - bicycle
+  - motorcycle
+  actions:
+  - walking
+  - running
+  - sitting
+  - standing
+  - eating
+  - drinking
+  - reading
+  - writing
+  - talking
+  - smiling
+  - jumping
+  - sleeping
+  - cooking
+  - driving
+  - dancing
+  locations:
+  - kitchen
+  - bedroom
+  - living_room
+  - office
+  - street
+  - park
+  - restaurant
+  - beach
+  - forest
+  - city
+  - home
+  - school
+  - hospital
+  - store
+  - garden
+experiment:
+  name: srija_multitask_baseline
+  description: Multi-task learning with tag prediction for visual storytelling
+  tags:
+  - multi-task
+  - visual-storytelling
+  - tag-prediction
+  notes: Baseline experiment with lambda_tag=0.3
