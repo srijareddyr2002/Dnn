@@ -206,7 +206,7 @@ CUDA 12.8+ (for GPU support)
 ### 1. Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/srijareddyr2002/Dnn.git
 cd visual-storytelling-multitask
 ```
 
