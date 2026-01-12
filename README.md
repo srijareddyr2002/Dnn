@@ -210,18 +210,19 @@ CUDA 12.8+ (for GPU support)
 - **Others**: tqdm==4.67.1, pyyaml==6.0.3
 
 ## Installation and Setup
+In google colab cell run
 
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/srijareddyr2002/Dnn.git
-cd Dnn
+!git clone https://github.com/srijareddyr2002/Dnn.git
+%cd Dnn
 ```
 
 ### 2. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+!pip install -r requirements.txt
 ```
 
 ### 3. Download VIST Dataset
@@ -361,10 +362,6 @@ The model should produce:
    - Interactive storytelling systems
    - Video captioning
    - Educational content generation
-
-## License
-
-This project is for academic research purposes. The VIST dataset has its own licensing terms. Please refer to the [VIST dataset page](http://visionandlanguage.net/VIST/) for usage restrictions.
 
 ## References
 
