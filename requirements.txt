@@ -1,12 +1,23 @@
+# ------------------------------------------------------------
+# PyTorch (use official PyTorch wheels – REQUIRED on Windows)
+# ------------------------------------------------------------
+--index-url https://download.pytorch.org/whl/cpu
+
+torch
+torchvision
+torchaudio
+
+# ------------------------------------------------------------
+# Default PyPI index for all other packages
+# ------------------------------------------------------------
+--extra-index-url https://pypi.org/simple
+
 # Core Numerical & Data Utilities
 numpy
 pandas
 scipy
 
-# Deep Learning Frameworks (CUDA installed separately)
-torch
-torchvision
-torchaudio
+# Deep Learning Utilities
 pytorch-lightning
 torchmetrics
 
