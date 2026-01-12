@@ -207,7 +207,7 @@ CUDA 12.8+ (for GPU support)
 
 ```bash
 git clone https://github.com/srijareddyr2002/Dnn.git
-cd visual-storytelling-multitask
+cd Dnn
 ```
 
 ### 2. Install Dependencies
