@@ -307,27 +307,16 @@ Example output:
 🏆 New best model! Val Loss: 6.756166
 ```
 
-## Expected Results
+## Key Results
+| Metric        | Score   |
+|---------------|---------|
+| BLEU-1        | 0.0592  |
+| BLEU-2        | 0.0249  |
+| BLEU-3        | 0.0151  |
+| BLEU-4        | 0.0100  |
+| ROUGE-L       | 0.1256  |
+| Perplexity ↓  | 599.2884 |
 
-### Quantitative Metrics
-
-Based on the validation results from training:
-
-1. **Image Quality Metrics**:
-   - SSIM (Structural Similarity Index): Expected improvement over baseline
-   - LPIPS (Learned Perceptual Image Patch Similarity): Lower is better
-   - MSE Loss: ~0.20-0.34 (decreasing trend)
-
-2. **Text Generation Metrics**:
-   - BLEU Score: Measures n-gram overlap with reference captions
-   - ROUGE-L Score: Measures longest common subsequence
-   - Perplexity: Lower values indicate better text predictions
-   - Cross-Entropy Loss: ~5.5-7.4 (decreasing trend)
-
-3. **Tag Prediction Metrics**:
-   - Precision/Recall/F1 for each tag category
-   - Hamming Loss: Multi-label classification accuracy
-   - Tag BCE Loss: ~0.0 (auxiliary task weight λ_tag=0.3)
 
 ### Training Characteristics
 
