@@ -1,5 +1,13 @@
 # Multi-Task Visual Storytelling with Tag Prediction
+# Multimodal Sequence Modelling for Visual Story Understanding.
+# Project Overview
+# Author: Sai Srija Reddy Ramasahayam
 
+
+## Quick Links
+- *[Experiments Notebook](experiment.ipynb)* – Full experimental workflow and implementation  
+- *[Evaluation Results](results/)* – All The results are in this folder 
+- *[Model Architecture](src/)* – Encoders, fusion, temporal modelling, and decoders.
 ## Project Overview
 
 This project implements a **Multi-Task Learning with Dual Losses to Better Story Alignment** model for visual storytelling. The model learns to predict both the next image and text in a story sequence while simultaneously learning to predict semantic tags (objects, actions, locations) for each frame. This auxiliary tag prediction task helps the model better understand the content of each frame, leading to more coherent and contextually appropriate predictions.
